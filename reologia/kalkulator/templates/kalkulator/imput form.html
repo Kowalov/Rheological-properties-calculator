@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Kalkulator Reologiczny
+    </title>
+</head>
+<body>
+<p style="text-align: center;"><strong>Kalkulator Reometryczny</strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: left;">Proszę podać dane:<br /></p>
+
+<form method="post">
+{% csrf_token %}
+    {{ form}}
+<input type="submit" value="oblicz">
+</form>
+<p>&nbsp;</p>
+<p>*Objaśnienie:</p>
+<p><span style="font-size: small;">1.Kąty odczytane z reometru należy podać w stopniach [<sup>0</sup>] i wpisać po przecinku w wyznaczone pole.</span></p>
+<p><span style="font-size: small;">2.Każdemu dostępnemu parametrowi reometra jest przypisany numer tak jak w tabelach poniżej. Po wyborze odpowednich parametr&oacute;w należy uzupełnić pola odpowiednim numerem.</span></p>
+<p style="text-align: left;"><span style="font-size: small;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; </span></p>
+<table style="height: 313px; float: left;" border="black" width="320">
+<tbody>
+<tr style="height: 27.7333px;">
+<td style="width: 111.517px; text-align: center; height: 27.7333px;">&nbsp;Układ Cylindr&oacute;w R-B</td>
+<td style="width: 84.4833px; text-align: center; height: 27.7333px;">&nbsp;Numer</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R1-B1</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;1</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R1-B2</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;2</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R1-B3</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;3</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R2-B1</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;4</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R2-B2</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;5</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R2-B3</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;6</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R3-B1</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;7</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R3-B2</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;8</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R3-B3</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;9</td>
+</tr>
+<tr style="height: 20px;">
+<td style="width: 111.517px; text-align: center; height: 20px;">&nbsp;R3-B4</td>
+<td style="width: 84.4833px; text-align: center; height: 20px;">&nbsp;10</td>
+</tr>
+</tbody>
+</table>
+<table style="height: 189px; float: right;" border="black" width="320">
+<tbody>
+<tr style="height: 39.05px;">
+<td style="width: 71.7167px; text-align: center; height: 39.05px;">&nbsp;Typ sprężyny</td>
+<td style="width: 63.2833px; text-align: center; height: 39.05px;">&nbsp;Numer</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 71.7167px; text-align: center; height: 18px;">&nbsp;FO-2</td>
+<td style="width: 63.2833px; text-align: center; height: 18px;">&nbsp;1</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 71.7167px; text-align: center; height: 18px;">&nbsp;FO-5</td>
+<td style="width: 63.2833px; text-align: center; height: 18px;">&nbsp;2</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 71.7167px; text-align: center; height: 18px;">&nbsp;F-1</td>
+<td style="width: 63.2833px; text-align: center; height: 18px;">&nbsp;3</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 71.7167px; text-align: center; height: 18px;">&nbsp;F-2</td>
+<td style="width: 63.2833px; text-align: center; height: 18px;">&nbsp;4</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 71.7167px; text-align: center; height: 18px;">&nbsp;F-3</td>
+<td style="width: 63.2833px; text-align: center; height: 18px;">&nbsp;5</td>
+</tr>
+<tr style="height: 18px;">
+<td style="width: 71.7167px; text-align: center; height: 18px;">&nbsp;F-10</td>
+<td style="width: 63.2833px; text-align: center; height: 18px;">&nbsp;6</td>
+</tr>
+</tbody>
+</table>
+<table style="height: 186px; margin-left: auto; margin-right: auto;" border="black" width="320">
+<tbody>
+<tr style="height: 7.51666px;">
+<td style="width: 126px; text-align: center; height: 7.51666px;">&nbsp;Rodzaj cylindra wewnętrznego B</td>
+<td style="width: 65px; text-align: center; height: 7.51666px;">&nbsp;Numer</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 126px; text-align: center; height: 26px;">&nbsp;B-1</td>
+<td style="width: 65px; text-align: center; height: 26px;">&nbsp;1</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 126px; text-align: center; height: 26px;">&nbsp;B-2</td>
+<td style="width: 65px; text-align: center; height: 26px;">&nbsp;2</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 126px; text-align: center; height: 26px;">&nbsp;B-3</td>
+<td style="width: 65px; text-align: center; height: 26px;">&nbsp;3</td>
+</tr>
+<tr style="height: 26px;">
+<td style="width: 126px; text-align: center; height: 26px;">&nbsp;B-4</td>
+<td style="width: 65px; text-align: center; height: 26px;">&nbsp;4</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>

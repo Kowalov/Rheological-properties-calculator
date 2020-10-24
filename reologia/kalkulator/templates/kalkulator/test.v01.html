@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REOMETRY </title>
+</head>
+<body>
+<form method="post">{% csrf_token %} <input type="submit" value="Powr&oacute;t" /></form>
+<p style="text-align: center;"><strong>Kalkulator Reometryczny</strong></p>
+<p><strong>Podane Dane:</strong></p>
+<p>Kąty[<sup>o</sup>] : {{katy}}</p>
+<p>&nbsp;</p>
+<p><strong>Parametry podanej cieczy:</strong></p>
+<p>Szybkość ścinania [1/s]: {{szybkosc_scinania}}</p>
+<p>Naprężenia styczne [Pa]:{{naprezenia_styczne}}</p>
+<p>Lepkość pozorna [Pa*s]: {{lepkosc_pozorna}}</p>
+<p>Model z najwyższym współczynnikiem korelacji : {{dopasowanie}} </p>
+<p>&nbsp;</p>
+{% if wykres %}
+<div style="width:600;height:500">
+{{ wykres|safe }}
+</div>
+{% endif %}
+
+<p style="text-align: center;"><strong>Wyniki dla poszczeg&oacute;lnych Model&oacute;w:</strong></p>
+<p style="text-align: center;">Model Newtona:</p>
+<table style="border-collapse: collapse; width: 100.177%; height: 41px;" border="1">
+  <tbody>
+    <tr style="height: 18px;">
+      <td style="width: 50%; height: 18px; text-align: center;">Lepkość dynamiczna newtona</td>
+      <td style="width: 50%; height: 18px; text-align: center;">Wsp&oacute;łczynnik korelacji R</td>
+    </tr>
+    <tr style="height: 18px;">
+      <td style="width: 50%; height: 18px; text-align: center;">{{lepkosc_dym_newtona}}</td>
+      <td style="width: 50%; height: 18px; text-align: center;">{{wspł_korelacji_newtona}}</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p style="text-align: center;">Model Binghama:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tbody>
+    <tr>
+      <td style="width: 33.3333%; text-align: center;">Lepkość plastyczna</td>
+      <td style="width: 33.3333%; text-align: center;">Granica płynięcia</td>
+      <td style="width: 33.3333%; text-align: center;">Wsp&oacute;łczynnik korelacji R</td>
+    </tr>
+    <tr>
+      <td style="width: 33.3333%; text-align: center;">{{lepkosc_plastyczna_b}}</td>
+      <td style="width: 33.3333%; text-align: center;">{{granica_plyniencia_b}}</td>
+      <td style="width: 33.3333%; text-align: center;">{{wspl_korelacji_binghama}}</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p style="text-align: center;">Model Ostwalda de Waele:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tbody>
+    <tr>
+      <td style="width: 33.3333%; text-align: center;">Wsp&oacute;łczynnik kształtu</td>
+      <td style="width: 33.3333%; text-align: center;">Wsp&oacute;łczynnik konsystencji</td>
+      <td style="width: 33.3333%; text-align: center;">Wsp&oacute;łczynnik korelacji R</td>
+    </tr>
+    <tr>
+      <td style="width: 33.3333%; text-align: center;">{{wspl_ksztaltu_odw}}</td>
+      <td style="width: 33.3333%; text-align: center;">{{wspl_konsystencji_odw}}</td>
+      <td style="width: 33.3333%; text-align: center;">{{wspl_korelacji_odw}}</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p style="text-align: center;">Model Cassona:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tbody>
+    <tr>
+      <td style="width: 33.3333%; text-align: center;">Lepkość Cassona</td>
+      <td style="width: 33.3333%; text-align: center;">Granica płynięcia</td>
+      <td style="width: 33.3333%; text-align: center;">Wsp&oacute;łczynnik korelacji R</td>
+    </tr>
+    <tr>
+      <td style="width: 33.3333%; text-align: center;">{{lepkosc_cassona}}</td>
+      <td style="width: 33.3333%; text-align: center;">{{granica_plny_cassona}}</td>
+      <td style="width: 33.3333%; text-align: center;">{{wspl_korelacji_cassona}}</td>
+    </tr>
+  </tbody>
+</table>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">Model Herschela - Bulkleya:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+  <tbody>
+    <tr>
+      <td style="width: 25%; text-align: center;">Wsp&oacute;łczynnik kształtu</td>
+      <td style="width: 25%; text-align: center;">Granica płynięcia</td>
+      <td style="width: 25%; text-align: center;">Wsp&oacute;łczynnik konsystencji</td>
+      <td style="width: 25%; text-align: center;">Wsp&oacute;łczynnik korelacji R</td>
+    </tr>
+    <tr>
+      <td style="width: 25%; text-align: center;">{{wspl_ksztaltu_hb}}</td>
+      <td style="width: 25%; text-align: center;">{{granica_plyn_hb}}</td>
+      <td style="width: 25%; text-align: center;">{{wspl_konsystencji_hb}}</td>
+      <td style="width: 25%; text-align: center;">{{wspl_korelacji_hb}}</td>
+    </tr>
+  </tbody>
+</table>
+{% if wykres %}
+<div style="width:600;height:500">
+{{ wykres|safe }}
+</div>
+{% endif %}
+</body>
+</html>
