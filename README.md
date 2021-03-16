@@ -1,4 +1,4 @@
-> Rheological properties calculator
+#  Rheological properties calculator
 > Web app that helps in studing the rheological parameters of drilling fluids
 
 ## Table of contents
