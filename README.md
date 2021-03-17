@@ -21,7 +21,8 @@ and calculate the most important rheological parameters.
 
 ## Technologies
 * Python - version 3.7
-* Pygame
+* Django
+* HTML
 
 ## Features
 List of features ready and TODOs for future development:
